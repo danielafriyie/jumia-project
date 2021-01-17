@@ -1,0 +1,17 @@
+- Seller Details
+    - Name
+    - Country of Origin
+    - Order Fulfillment Rate
+    - Quality Score
+    - Seller Score
+    - Followers
+- Product URL
+- Product Name
+- Brand
+- Product description
+- Pricing
+- Discount
+- Image URL
+- Customer Reviews
+- Ratings
+- Category

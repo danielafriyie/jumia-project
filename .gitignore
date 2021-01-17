@@ -1,0 +1,6 @@
+.idea
+.vscode
+jumia.sqlite3
+.scrapy
+jumia/spiders/bunny.py
+__pycache__
