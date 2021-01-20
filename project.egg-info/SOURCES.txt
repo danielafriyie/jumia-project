@@ -1,0 +1,15 @@
+README.md
+setup.py
+jumia/__init__.py
+jumia/items.py
+jumia/middlewares.py
+jumia/pipelines.py
+jumia/settings.py
+jumia/spiders/__init__.py
+jumia/spiders/bunny.py
+jumia/spiders/mobile_phones.py
+project.egg-info/PKG-INFO
+project.egg-info/SOURCES.txt
+project.egg-info/dependency_links.txt
+project.egg-info/entry_points.txt
+project.egg-info/top_level.txt

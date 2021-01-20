@@ -1,5 +1,8 @@
 import sqlite3 as sq
 import os
+import logging
+
+from scrapy.exceptions import DropItem
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 db_path = os.path.join(BASE_DIR, 'jumia.sqlite3')
@@ -129,3 +132,18 @@ class SellerPipeline:
                 )
             )
         return item
+
+
+class SamsungPriceMonitorPipeline:
+    def open_spider(self, spider):
+        pass
+
+    def close_spider(self, spider):
+        pass
+
+    def process_item(self, item, spider):
+        if item.__class__.__name__ == 'ProductPrimaryDetails':
+            if item.get('discount'):
+                if float(item.get('discount')) > 15:
+                    return item
+            raise DropItem(f"Discount is less than 15% {item}")

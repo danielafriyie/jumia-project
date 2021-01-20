@@ -1,20 +1,30 @@
 from scrapy import Item, Field
 
 
-class ProductItem(Item):
+class ProductPrimaryDetails(Item):
     url = Field()
     name = Field()
-    brand = Field()
-    description = Field()
     price = Field()
     discounted_price = Field()
     discount = Field()
     image_url = Field()
+
+
+class ProductSecondaryDetails(Item):
+    brand = Field()
+    description = Field()
     customer_reviews = Field()
     ratings = Field()
     category = Field()
+
+
+class ProductSellerDetails(Item):
     seller_url = Field()
     seller_name = Field()
+
+
+class ProductItem(ProductPrimaryDetails, ProductSecondaryDetails, ProductSellerDetails):
+    pass
 
 
 class SellerItem(Item):

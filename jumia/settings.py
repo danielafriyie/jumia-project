@@ -40,13 +40,14 @@ TELNETCONSOLE_ENABLED = True
 
 ITEM_PIPELINES = {
     'jumia.pipelines.ProductPipeline': 300,
-    'jumia.pipelines.SellerPipeline': 300
+    'jumia.pipelines.SellerPipeline': 400,
+    'jumia.pipelines.SamsungPriceMonitorPipeline': 500
 }
 
 AUTOTHROTTLE_ENABLED = True
-AUTOTHROTTLE_START_DELAY = 5
-AUTOTHROTTLE_MAX_DELAY = 60
-AUTOTHROTTLE_TARGET_CONCURRENCY = 2
+# AUTOTHROTTLE_START_DELAY = 5
+# AUTOTHROTTLE_MAX_DELAY = 60
+# AUTOTHROTTLE_TARGET_CONCURRENCY = 2
 AUTOTHROTTLE_DEBUG = True
 
 HTTPCACHE_ENABLED = True

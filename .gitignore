@@ -4,3 +4,8 @@ jumia.sqlite3
 .scrapy
 jumia/spiders/bunny.py
 __pycache__
+build
+scrapinghub.yml
+setup.py
+*.csv
+*.json
